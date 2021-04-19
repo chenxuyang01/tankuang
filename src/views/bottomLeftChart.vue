@@ -1,5 +1,5 @@
 <template>
-  <div id="bottomRight">
+  <div id="bottomLeftChart">
     <!-- <div class="d-flex pt-2 pl-2">
       <span style="color:#5cd9e8">
         <icon name="chart-pie"></icon>
@@ -15,13 +15,13 @@
                     <icon name="chart-bar"></icon>
                 </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">区块金额</span>
+          <span class="fs-xl text mx-2">各年份金额</span>
         </div>
       </div>
-      <centerRightBottomChart/>
+      <centerRightRightChart/>
     </div>
 
-    </div>
+  </div>
   </div>
 </template>
 
@@ -38,9 +38,9 @@ export default {
     centerRightBottomChart
   },
   name: 'BottomCharts',
-/*  components: {
-    LabelTag
-  },*/
+  /*  components: {
+      LabelTag
+    },*/
   /*data () {
     return {
       siteData:661,

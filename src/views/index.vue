@@ -8,7 +8,7 @@
           <div class="d-flex jc-center">
             <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
             <div class="title">
-              <span class="title-text">数据可视化平台</span>
+              <span class="title-text">探矿系统</span>
               <dv-decoration-6
                 class="title-bototm"
                 :reverse="true"
@@ -34,15 +34,15 @@
               style="width: 6.25rem; text-align: left;background-color: #0f1325;"
             >
               <span class="react-before"></span>
-              <span class="text">信息统计页</span>
+              <span class="text">勘查项目登记</span>
             </div>
             <div class="react-right ml-3" style="background-color: #0f1325;">
-              <span class="text">后台数据管理</span>
+              <span class="text">地理区域显示</span>
             </div>
           </div>
           <div style="width: 40%" class="d-flex">
             <div class="react-left bg-color-blue mr-3">
-              <span class="text fw-b">大数据视图</span>
+              <span class="text fw-b">统计视图</span>
             </div>
             <div
               class="react-left mr-4"
@@ -59,67 +59,36 @@
           <div class="content-box">
             <div>
               <!-- 搜索框 -->
-              <dv-border-box-12> 
-                <centerLeftMap />
+              <dv-border-box-12>
+                <bottomLeftCapacity />
               </dv-border-box-12>
             </div>
             <div>
+              <dv-border-box-8 dur="10">
+                <centerLeftMap />
+              </dv-border-box-8>
+            </div>
+            <div>
+              <!-- 搜索框 -->
               <dv-border-box-12>
-                <centerRightPillars/>
-                <!-- 三分柱状图 -->
+                <centerRightChart />
               </dv-border-box-12>
             </div>
           </div>
 
           <div class="bottom-box">
             <dv-border-box-12>
-              <bottomLeftCapacity/>
+              <bottomLeftChart />
             </dv-border-box-12>
             <dv-border-box-13>
-              <bottomRightChart/>
+              <bottomXiangxixinxi/>
             </dv-border-box-13>
+            <dv-border-box-12>
+              <bottomRightChart/>
+            </dv-border-box-12>
           </div>
         </div>
 
-
-        <!-- <div class="body-box">
-          第三行数据
-          <div class="content-box">
-            <div>
-              <dv-border-box-12>
-                <centerLeft1 />
-              </dv-border-box-12>
-            </div>
-            <div>
-              <dv-border-box-12>
-                <centerLeft2 />
-              </dv-border-box-12>
-            </div>
-            中间
-            <div>
-              <center />
-            </div>
-            中间
-            <div>
-              <centerRight3 />
-            </div>
-            <div>
-              <dv-border-box-13>
-                <centerRight1 />
-              </dv-border-box-13>
-            </div>
-          </div>
-
-          第四行数据
-          <div class="bototm-box">
-            <dv-border-box-13>
-              <bottomLeft />
-            </dv-border-box-13>
-            <dv-border-box-12>
-              <bottomRight />
-            </dv-border-box-12>
-          </div>
-        </div> -->
       </div>
     </dv-full-screen-container>
   </div>
@@ -130,7 +99,9 @@ import { formatTime } from '../utils/index.js'
 import centerLeftMap from './centerLeftMap'
 import bottomLeftCapacity from './bottomLeftCapacity'
 import bottomRightChart from './bottomRightChart'
-import centerRightPillars from './centerRightPillars'
+import bottomXiangxixinxi from './bottomXiangxixinxi'
+import centerRightChart from './centerRightChart'
+import bottomLeftChart from './bottomLeftChart'
 // import centerLeft1 from "./centerLeft1";
 // import centerLeft2 from "./centerLeft2";
 // import centerRight1 from "./centerRight1";
@@ -153,7 +124,10 @@ export default {
     centerLeftMap,
     bottomLeftCapacity,
     bottomRightChart,
-    centerRightPillars
+    bottomXiangxixinxi,
+    centerRightChart,
+    bottomLeftChart,
+    // centerTable
     // centerLeft1,
     // centerLeft2,
     // centerRight1,

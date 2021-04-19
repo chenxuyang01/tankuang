@@ -1,38 +1,59 @@
 <template>
-  <div id="bottomLeft">
+  <div id="bottomLeftCapacity">
     <div class="up">
-      <div class="item bg-color-black" v-for="item in titleItem" :key="item.title">
+
+<!--      <div class="item bg-color-black" v-for="item in titleItem" :key="item.title">
           <p class="ml-3 colorBlue fw-a">{{item.title}}</p>
           <div>
-          <dv-digital-flop :config="item.number" style="width:1.5rem;height:.625rem;" />
+          <dv-digital-flop :config="item.number" style="width:1.5rem;height:0.625rem;" />
+
           </div>
+      </div>-->
+       <div >
+         <br>
+        <p class="ml-3 colorBlue fw-a" style="top:10px" >{{"矿种"}}</p>
+        <div>
+          <dv-digital-flop :config="titleItem[0].number" style="width:1.5rem;height:0.625rem;" />
+        </div>
+      <p class="ml-3 colorBlue fw-a" style="margin-top:-63px;margin-left: 150px">{{"面积/km²"}}</p>
+      <div>
+        <dv-digital-flop :config="titleItem[1].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 140px" />
       </div>
+         <p class="ml-3 colorBlue fw-a" style="margin-top:-63px;margin-left: 300px">{{"行政区"}}</p>
+         <div>
+           <dv-digital-flop :config="titleItem[2].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 280px" />
+         </div>
+       </div>
+
+
+
+
     </div>
+    <template>
+      <el-select v-model="value"   style="margin-left:10px;width:450px" placeholder="请选择矿种">
+        <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+        </el-option>
+      </el-select>
+
+    </template>
+    <br><br>
     <div class="down">
-      <div class="percent bg-color-black">
-        <div class="item">
-          <span>全球数据使用率1</span>
-          <BottomChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
+
+      <div class="bg-color-black">
+        <div class="d-flex pt-2 pl-2">
+        <span style="color:#5cd9e8">
+          <icon name="chart-line"></icon>
+        </span>
+          <div class="d-flex">
+            <span class="fs-xl text mx-2">项目列表</span>
+          </div>
         </div>
-        <div class="item">
-          <span>全球数据使用率2</span>
-          <BottomChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
-        </div>
-        <div class="item">
-          <span>全球数据使用率3</span>
-          <BottomChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
-        </div>
-        <div class="item">
-          <span>全球数据使用率4</span>
-          <BottomChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
-        </div>
-        <div class="item">
-          <span>全球数据使用率5</span>
-          <BottomChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
-        </div>
-        <div class="item">
-          <span>全球数据使用率6</span>
-          <BottomChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
+        <div class="d-flex jc-center body-box">
+          <dv-scroll-board :config="config" style="width:440px;height:310px" />
         </div>
       </div>
     </div>
@@ -44,55 +65,70 @@ import BottomChart from "@/components/echart/bottom/bottomLeftChart";
 export default {
   data() {
     return {
+      options: [{
+        value: '选项1',
+        label: '金矿'
+      }, {
+        value: '选项2',
+        label: '铜矿'
+      }, {
+        value: '选项3',
+        label: '铅矿'
+      }, {
+        value: '选项4',
+        label: '氢气矿'
+      },],
+      value: '',
+      config: {
+
+        header: ["项目序号", "项目名称"],
+        data: [
+          ["07233945", "黑龙江省绥芬河市建新矿村金刚石矿详查"],
+          ["14230678", "黑龙江省伊春市红山地区钼多金属矿预查"],
+          ["12230012", "黑龙江省阿城市王家岗子地热普查"],
+          ["14230944", "黑龙江省铁力市二股东山铁矿外围铁多金属矿详查"],
+          ["15010199", "黑龙江省黑河市老爷岭金多金属矿详查"],
+          ["13230474", "黑龙江省尚志市大泥河中游金多金属矿普查"],
+          ["18230129", "黑龙江省庆安县依通河林场银多金属矿普查"],
+          ["17230136", "黑龙江省萝北县延军第一林场石墨矿普查"],
+          ["19230009", "黑龙江省七台河市向阳村铜多金属矿普查"],
+          ["15230247", "黑龙江省东宁县金厂矿区及外围岩金详查"]
+        ],
+        importantData: ["金矿","65.00","黑河市"],
+        rowNum: 6, //表格行数
+        headerHeight: 35,
+        headerBGC: "#0f1325", //表头
+        oddRowBGC: "#0f1325", //奇数行
+        evenRowBGC: "#171c33", //偶数行
+        index: true,
+        columnWidth: [20],
+        align: ["center"]
+      },
         titleItem: [
             {
-            title: "数据T1",
+            title: "矿种",
             number: {
-                number: [49],
-                toFixed: 1,
+                number: [],
+                toFixed: 0,
+                content: "金矿{nt}"
+            }
+            },
+            {
+            title: "面积",
+            number: {
+                number: [96],
+                toFixed: 2,
                 content: "{nt}"
             }
             },
             {
-            title: "数据T2",
+            title: "行政区",
             number: {
-                number: [43],
+                number: [],
                 toFixed: 1,
-                content: "{nt}"
+                content: "{nt}黑河市"
             }
             },
-            {
-            title: "数据T3",
-            number: {
-                number: [36],
-                toFixed: 1,
-                content: "{nt}"
-            }
-            },
-            {
-            title: "数据T4",
-            number: {
-                number: [142.3],
-                toFixed: 1,
-                content: "{nt}"
-            }
-            },
-            {
-            title: "数据T5",
-            number: {
-                number: [106],
-                toFixed: 1,
-                content: "{nt}"
-            }
-            },
-            {
-            title: "数据T6",
-            number: {
-                number: [100],
-                toFixed: 1,
-                content: "{nt}"
-            }
-            }
         ],
       // 通过率和达标率的组件复用数据
       rate: [

@@ -5,6 +5,7 @@
   height: 100%;
 
   .bg {
+    //padding: 1rem;
     padding: 0.2rem 0.2rem 0 0.2rem;
     background-image: url("../assets/pageBg.png");
     background-size: cover;
@@ -49,7 +50,7 @@
         position: absolute;
         right: -0.3125rem;
         top: 0;
-        height: 0.625rem;
+        height: 2.625rem;
         width: 0.625rem;
         background-color: #0f1325;
         transform: skewX(45deg);
@@ -87,21 +88,25 @@
     }
 
     .body-box {
-      margin-top: 0.2rem;
+      margin-top: 0rem;
       display: flex;
       flex-direction: column;
 
       //下方区域的布局
       .content-box {
+        //height:70%;
+        margin-top: 0rem;
         display: grid;
-        grid-template-columns: 8fr 7fr;
+        grid-template-columns: 25% 50% 25%;
+        //grid-template-rows: 12% 80%
       }
 
       // 底部数据
       .bottom-box {
-        margin-top: 0.125rem;
+        //height:30%;
+        margin-top: 0rem;
         display: grid;
-        grid-template-columns: 4fr 11fr;
+        grid-template-columns: 25% 50% 25%;
       }
     }
   }

@@ -3,7 +3,16 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import dataV from '@jiaminghi/data-view';
+import ElementUI from 'element-ui'
+import '../theme/index.css'
+// import BaiduMap from 'vue-baidu-map'
+// import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(dataV);
+
+Vue.use(ElementUI);
+/*Vue.use(BaiduMap,{
+  ak:"m49denrBefRs9GOcNKTUlAq5evfhnaCU"
+});*/
 
 // 按需引入vue-awesome图标
 import Icon from 'vue-awesome/components/Icon';

@@ -3,6 +3,10 @@
     <mapChart/>
     <!-- 世界地图，区域化展示各个维度的数据 -->
   </div>
+<!--  <template>
+    <baidu-map class="bm-view">
+    </baidu-map>
+  </template>-->
 </template>
 
 <script>
