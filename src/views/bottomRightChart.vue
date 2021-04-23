@@ -19,10 +19,11 @@
         </div>
       </div>
       <centerRightBottomChart/>
+
     </div>
 
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -38,126 +39,7 @@ export default {
     centerRightBottomChart
   },
   name: 'BottomCharts',
-/*  components: {
-    LabelTag
-  },*/
-  /*data () {
-    return {
-      siteData:661,
-      clusterData:1135,
-      hypervisorData:1297,
-      physicalData:661,
-      vmData:1110,
-      config1: {
-        data: [
-          {
-            name: '主机1',
-            value: 356
-          },
-          {
-            name: '主机2',
-            value: 215
-          },
-          {
-            name: '主机3',
-            value: 90
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
 
-      config2: {
-        data: [
-          {
-            name: '主机2',
-            value: 615
-          },
-          {
-            name: '主机2',
-            value: 322
-          },
-          {
-            name: '主机3',
-            value: 198
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config3: {
-        data: [
-          {
-            name: '主机1',
-            value: 452
-          },
-          {
-            name: '主机2',
-            value: 512
-          },
-          {
-            name: '主机3',
-            value: 333
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config4: {
-        data: [
-          {
-            name: '主机1',
-            value: 156
-          },
-          {
-            name: '主机2',
-            value: 415
-          },
-          {
-            name: '主机3',
-            value: 90
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config5: {
-        data: [
-          {
-            name: '主机1',
-            value: 234
-          },
-          {
-            name: '主机2',
-            value: 222
-          },
-          {
-            name: '主机3',
-            value: 654
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      labelConfig: {
-        data: ['主机1', '主机2', '主机3']
-      }
-    }
-  },*/
   mounted() {},
   methods: {}
 }

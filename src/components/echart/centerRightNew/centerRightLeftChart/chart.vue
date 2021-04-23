@@ -30,6 +30,7 @@ export default {
     cdata: {
       handler (newData) {
         this.options = {
+          color: ['#ffe600', '#006699', '#4cabce'],
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -39,13 +40,13 @@ export default {
                         }
                     }
                 },
-                legend: {
+                /*legend: {
                     data: ['全球数1', '全球数2', '全球数3']
-                },
+                },*/
                 grid: {
                   left: "6%",
                   right: "4%",
-                  bottom: "10%",
+                  bottom: "0%",
                   containLabel: true,
                 },
                 xAxis: [
@@ -64,22 +65,22 @@ export default {
                     }
                 ],
                 series: [
-                    {
+                    /*{
                         name: '全球数1',
                         type: 'bar',
                         data: newData.proData
-                    },
+                    },*/
                     {
-                        name: '全球数2',
+                        name: '金额',
                         type: 'bar',
                         data: newData.deskData
                     },
                     ,
-                    {
-                        name: '全球数3',
-                        type: 'bar',
-                        data: newData.comData
-                    }
+                    // {
+                    //     name: '全球数3',
+                    //     type: 'bar',
+                    //     data: newData.comData
+                    // }
                 ]
             };
       },

@@ -11,17 +11,17 @@
       </div>-->
        <div >
          <br>
-        <p class="ml-3 colorBlue fw-a" style="top:10px" >{{"矿种"}}</p>
+        <!--<p class="ml-3 colorBlue fw-a" style="top:10px" >{{"矿种"}}</p>
         <div>
           <dv-digital-flop :config="titleItem[0].number" style="width:1.5rem;height:0.625rem;" />
-        </div>
-      <p class="ml-3 colorBlue fw-a" style="margin-top:-63px;margin-left: 150px">{{"面积/km²"}}</p>
+        </div>-->
+      <p class="ml-3 colorBlue fw-a" style="margin-top:-0px;margin-left: 20px">{{"面积/km²"}}</p>
       <div>
-        <dv-digital-flop :config="titleItem[1].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 140px" />
+        <dv-digital-flop :config="titleItem[1].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 20px" />
       </div>
-         <p class="ml-3 colorBlue fw-a" style="margin-top:-63px;margin-left: 300px">{{"行政区"}}</p>
+         <p class="ml-3 colorBlue fw-a" style="margin-top:-64px;margin-left: 200px">{{"行政区"}}</p>
          <div>
-           <dv-digital-flop :config="titleItem[2].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 280px" />
+           <dv-digital-flop :config="titleItem[2].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 200px" />
          </div>
        </div>
 
@@ -66,22 +66,22 @@ export default {
   data() {
     return {
       options: [{
-        value: '选项1',
+        value: '11001',
         label: '金矿'
       }, {
-        value: '选项2',
+        value: '97010',
         label: '铜矿'
       }, {
-        value: '选项3',
+        value: '42201',
         label: '铅矿'
       }, {
-        value: '选项4',
+        value: '17050',
         label: '氢气矿'
       },],
       value: '',
       config: {
 
-        header: ["项目序号", "项目名称"],
+        header: ["申请序号", "项目名称"],
         data: [
           ["07233945", "黑龙江省绥芬河市建新矿村金刚石矿详查"],
           ["14230678", "黑龙江省伊春市红山地区钼多金属矿预查"],
@@ -110,15 +110,15 @@ export default {
             number: {
                 number: [],
                 toFixed: 0,
-                content: "金矿{nt}"
+                content: "建筑用石料"
             }
             },
             {
             title: "面积",
             number: {
-                number: [96],
+                number: [39.79],
                 toFixed: 2,
-                content: "{nt}"
+                content: ""
             }
             },
             {
@@ -126,7 +126,7 @@ export default {
             number: {
                 number: [],
                 toFixed: 1,
-                content: "{nt}黑河市"
+                content: "东宁市"
             }
             },
         ],

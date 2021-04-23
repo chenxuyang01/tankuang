@@ -1,13 +1,6 @@
 <template>
   <div id="bottomLeftChart">
-    <!-- <div class="d-flex pt-2 pl-2">
-      <span style="color:#5cd9e8">
-        <icon name="chart-pie"></icon>
-      </span>
-      <div class="d-flex">
-        <span class="fs-xl text mx-2">服务器生产年份分布</span>
-      </div>
-    </div> -->
+
 
     <div class="bc-height-chart-item" style="margin:0px 5px 0px 0px">
       <div class="d-flex pt-2 pl-2">

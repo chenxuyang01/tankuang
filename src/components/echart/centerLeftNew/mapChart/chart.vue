@@ -14,7 +14,9 @@ import Echart from '@/common/echart'
 export default {
   data () {
     return {
-      options: {},
+      options: {
+
+      },
     };
   },
   components: {
@@ -34,7 +36,7 @@ export default {
           // 悬浮提示
           tooltip: {
               trigger: "item",
-              backgroundColor: "#1540a1",
+              backgroundColor: "#d93a49",
               borderColor: "#FFFFCC",
               showDelay: 0,
               hideDelay: 0,

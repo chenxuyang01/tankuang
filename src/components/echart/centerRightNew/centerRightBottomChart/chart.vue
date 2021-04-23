@@ -37,13 +37,13 @@ export default {
                     type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                 }
             },
-            legend: {
+            /*legend: {
                 data: ['预估量', '测试量', '使用量']
-            },
+            },*/
             grid: {
                 left: '3%',
                 right: '8%',
-                bottom: '10%',
+                bottom: '-0%',
                 containLabel: true
             },
             xAxis: {
@@ -55,7 +55,7 @@ export default {
             },
             series: [
                 {
-                    name: '预估量',
+                    name: '金额',
                     type: 'bar',
                     stack: '总量',
                     label: {
@@ -64,7 +64,7 @@ export default {
                     },
                     data: newData.proData
                 },
-                {
+                /*{
                     name: '测试量',
                     type: 'bar',
                     stack: '总量',
@@ -83,7 +83,7 @@ export default {
                         position: 'insideRight'
                     },
                     data: newData.comData
-                }
+                }*/
             ]
         };
       },

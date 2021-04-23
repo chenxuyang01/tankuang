@@ -80,9 +80,9 @@
             <dv-border-box-12>
               <bottomLeftChart />
             </dv-border-box-12>
-            <dv-border-box-13>
+            <dv-border-box-12>
               <bottomXiangxixinxi/>
-            </dv-border-box-13>
+            </dv-border-box-12>
             <dv-border-box-12>
               <bottomRightChart/>
             </dv-border-box-12>

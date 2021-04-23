@@ -30,19 +30,20 @@ export default {
     cdata: {
       handler (newData) {
         this.options = {
+          color: ['#1d953f', '#006699', '#4cabce'],
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
                 }
             },
-            legend: {
-                data: ['TEST1', 'TEST2', 'TEST3']
-            },
+            // legend: {
+            //     data: ['TEST1', 'TEST2', 'TEST3']
+            // },
             grid: {
                 left: '3%',
                 right: '8%',
-                bottom: '10%',
+                bottom: '0%',
                 containLabel: true
             },
             xAxis: {
@@ -54,7 +55,7 @@ export default {
             },
             series: [
                 {
-                    name: 'TEST1',
+                    name: '金额',
                     type: 'bar',
                     stack: '总量',
                     label: {
@@ -63,7 +64,7 @@ export default {
                     },
                     data: newData.proData
                 },
-                {
+                /*{
                     name: 'TEST2',
                     type: 'bar',
                     stack: '总量',
@@ -82,7 +83,7 @@ export default {
                         position: 'insideRight'
                     },
                     data: newData.comData
-                }
+                }*/
             ]
         };
       },
