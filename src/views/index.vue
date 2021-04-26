@@ -64,7 +64,7 @@
               </dv-border-box-12>
             </div>
             <div>
-              <dv-border-box-8 dur="10">
+              <dv-border-box-8 dur=8>
                 <centerLeftMap />
               </dv-border-box-8>
             </div>

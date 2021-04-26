@@ -21,10 +21,16 @@ import 'vue-awesome/icons/chart-area.js';
 import 'vue-awesome/icons/chart-pie.js';
 import 'vue-awesome/icons/chart-line.js';
 import 'vue-awesome/icons/align-left.js';
-
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
 // 全局注册图标
 Vue.component('icon', Icon);
 
+import VueTianditu from "vue-tianditu";
+Vue.use(VueTianditu, {
+  v: "4.0",
+  tk: "8a2df64eaa9ff3582718090feacf0a09"
+});
 // 适配flex
 import '@/common/flexible.js';
 
