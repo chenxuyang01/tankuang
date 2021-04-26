@@ -15,7 +15,7 @@
 
 
 <script>
-import heiborder from "../resource/heiborder.json"
+//import heiborder from "../resource/heiborder.json"
 
 export default {
   name: "ex-map",

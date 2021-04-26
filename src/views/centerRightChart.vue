@@ -15,10 +15,11 @@
                     <icon name="chart-bar"></icon>
                 </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">投资方金额</span>
+          <span class="fs-xl text mx-2">各年份金额</span>
         </div>
       </div>
-      <centerRightLeftChart/>
+      <!--      <centerRightLeftChart/>-->
+      <centerRightRightChart/>
     </div>
 
   </div>

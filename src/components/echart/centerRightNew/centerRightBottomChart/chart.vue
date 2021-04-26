@@ -1,10 +1,10 @@
 <template>
   <div>
     <Echart
-      :options="options"
-      id="centerRightBottomChart"
-      height="3rem"
-      width="100%"
+        :options="options"
+        id="centerRightBottomChart"
+        height="350px"
+        width="100%"
     ></Echart>
   </div>
 </template>
@@ -30,61 +30,40 @@ export default {
     cdata: {
       handler (newData) {
         this.options = {
-            color: ['#e5323e', '#006699', '#4cabce'],
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                }
+          color: ['#e5323e', '#006699', '#4cabce'],
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+              type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+          },
+          grid: {
+            left: '3%',
+            right: '8%',
+            bottom: '-0%',
+            containLabel: true
+          },
+          xAxis: {
+            type: 'value',
+            name: '万元'
+          },
+          yAxis: {
+            type: 'category',
+            data: newData.category
+          },
+          series: [
+            {
+              name: '金额',
+              type: 'bar',
+              stack: '总量',
+              label: {
+                // show: true,
+                show: false,
+                position: 'insideRight'
+              },
+              data: newData.proData
             },
-            /*legend: {
-                data: ['预估量', '测试量', '使用量']
-            },*/
-            grid: {
-                left: '3%',
-                right: '8%',
-                bottom: '-0%',
-                containLabel: true
-            },
-            xAxis: {
-                type: 'value'
-            },
-            yAxis: {
-                type: 'category',
-                data: newData.category
-            },
-            series: [
-                {
-                    name: '金额',
-                    type: 'bar',
-                    stack: '总量',
-                    label: {
-                        // show: true,
-                        position: 'insideRight'
-                    },
-                    data: newData.proData
-                },
-                /*{
-                    name: '测试量',
-                    type: 'bar',
-                    stack: '总量',
-                    label: {
-                        // show: true,
-                        position: 'insideRight'
-                    },
-                    data: newData.deskData
-                },
-                {
-                    name: '使用量',
-                    type: 'bar',
-                    stack: '总量',
-                    label: {
-                        // show: true,
-                        position: 'insideRight'
-                    },
-                    data: newData.comData
-                }*/
-            ]
+          ]
         };
       },
       immediate: true,

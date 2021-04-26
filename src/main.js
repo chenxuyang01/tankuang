@@ -5,6 +5,10 @@ import store from './store';
 import dataV from '@jiaminghi/data-view';
 import ElementUI from 'element-ui'
 import '../theme/index.css'
+import axios from 'axios'
+import Qs from 'qs'
+import VueAxios from 'vue-axios'
+Vue.prototype.$axios = axios
 // import BaiduMap from 'vue-baidu-map'
 // import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(dataV);
