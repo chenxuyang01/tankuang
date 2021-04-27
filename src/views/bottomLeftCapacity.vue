@@ -68,19 +68,7 @@ import Qs from 'qs'
 export default {
   data() {
     return {
-      tableData:[
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-        {id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},{id:'',name:''},
-
-      ],
+      tableData: [],
       options: [
         {value: '11001', label: '煤'},
         {value: '11002', label: '油页岩'},
@@ -236,15 +224,18 @@ export default {
 
     getKuangZhong(value) {
       const _this = this
-      for(let i=0;i<_this.tableData.length;i++){
-        _this.tableData[i].id =''
-        _this.tableData[i].name =''
-      }
       _this.$axios.get('http://192.168.1.222:8003/querybymintype?type='+value).then(function (resp) {
-        for (let  i = 0; i < 158; i++) {
-          _this.tableData[i].id = Qs.parse(resp.data)[i].申请序号
-          _this.tableData[i].name = Qs.parse(resp.data)[i].项目名称
+        _this.tableData.length=0;
+        var dataLength=resp.data.length;
+        console.log(dataLength);
+        for (let  i = 0; i < dataLength; i++) {
+          const dict = {'id': null, 'name': null};
+          dict.id = Qs.parse(resp.data)[i].申请序号;
+          dict.name = Qs.parse(resp.data)[i].项目名称;
+          // console.log(dict);
+          _this.tableData.push(dict);
         }
+        console.log(_this.tableData);
       })
     },
 

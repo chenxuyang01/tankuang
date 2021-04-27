@@ -88,7 +88,7 @@ export default {
     var HLJdata=require('../areaData/heilongjiang.json');
     this.HLJarea=HLJdata.features[0].geometry.coordinates[0];
     this.HLJarea.push(HLJdata.features[0].geometry.coordinates[1]);
-    console.log(this.HLJarea);
+    // console.log(this.HLJarea);
 
     //直接显示所有数据对应的区域
     // this.$http.get(this.url).then(res => {
