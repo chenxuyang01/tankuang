@@ -72,7 +72,7 @@ export default {
   align-items: center;
 
   .label-item {
-    margin: 5px;
+    margin: 0.075rem;
     font-size: 15px;
     display: flex;
     align-items: center;

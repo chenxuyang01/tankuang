@@ -1,15 +1,7 @@
 <template>
   <div id="bottomRight">
-    <!-- <div class="d-flex pt-2 pl-2">
-      <span style="color:#5cd9e8">
-        <icon name="chart-pie"></icon>
-      </span>
-      <div class="d-flex">
-        <span class="fs-xl text mx-2">服务器生产年份分布</span>
-      </div>
-    </div> -->
 
-    <div class="bc-height-chart-item" style="margin:0px 5px 0px 0px">
+    <div class="bc-height-chart-item" style="margin:0rem 0.22rem 0rem 0rem">
       <div class="d-flex pt-2 pl-2">
                 <span style="color:#5cd9e8">
                     <icon name="chart-bar"></icon>
@@ -60,15 +52,15 @@ export default {
     .bc-chart-item {
       width: 20%;
       height: 100%;
-      padding-top: 20px;
+      padding-top: 0.3rem;
       box-sizing: border-box;
     }
 
     .bcci-header {
-      height: 50px;
+      height: 0.75rem;
       text-align: center;
-      line-height: 50px;
-      font-size: 20px;
+      line-height: 0.75rem;
+      font-size: 0.3rem;
     }
 
     .dv-active-ring-chart {
@@ -76,11 +68,11 @@ export default {
     }
 
     .label-tag {
-      height: 30px;
+      height: 0.45rem;
     }
 
     .active-ring-name {
-      font-size: 16px !important;
+      font-size: 0.20rem !important;
     }
 
     .decoration-1, .decoration-2, .decoration-3, .decoration-4 {

@@ -5,13 +5,13 @@
       <div >
         <br>
 
-        <p class="ml-3 colorBlue fw-a" style="margin-top:-0px;margin-left: 20px">{{"面积/km²"}}</p>
+        <p class="ml-3 colorBlue fw-a" style="margin-top:0rem;margin-left: 0.2rem">{{"面积/km²"}}</p>
         <div>
-          <dv-digital-flop :config="titleItem[1].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 20px" />
+          <dv-digital-flop :config="titleItem[1].number" style="width:1.5rem;height:0.625rem;margin-top:0rem;margin-left: 0.25rem" />
         </div>
-        <p class="ml-3 colorBlue fw-a" style="margin-top:-64px;margin-left: 200px">{{"行政区"}}</p>
+        <p class="ml-3 colorBlue fw-a" style="margin-top:-0.8rem;margin-left: 2.4rem">{{"行政区"}}</p>
         <div>
-          <dv-digital-flop :config="titleItem[2].number" style="width:1.5rem;height:0.625rem;margin-top:0px;margin-left: 200px" />
+          <dv-digital-flop :config="titleItem[2].number" style="width:1.5rem;height:0.625rem;margin-top:0rem;margin-left: 2.5rem" />
         </div>
       </div>
 
@@ -20,7 +20,7 @@
 
     </div>
     <template>
-      <el-select v-model="value"   style="margin-left:10px;width:450px" placeholder="请选择矿种" @change="getKuangZhong(value)">
+      <el-select v-model="value"   style="margin-left:0.15rem;width:5.6rem" placeholder="请选择矿种" @change="getKuangZhong(value)">
         <el-option
             v-for="item in options"
             :key="item.value"
@@ -35,7 +35,7 @@
     <div class="down">
 
       <div class="bg-color-black">
-        <div class="d-flex jc-center body-box" style="width:450px;height:310px;margin-left:10px" >
+        <div class="d-flex jc-center body-box" style="width:5.65rem;height:4.35rem;margin-left:0.08rem" >
           <el-table
               :data="tableData"
               height="250"

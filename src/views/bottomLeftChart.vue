@@ -2,7 +2,7 @@
   <div id="bottomLeftChart">
 
 
-    <div class="bc-height-chart-item" style="margin:0px 5px 0px 0px">
+    <div class="bc-height-chart-item" style="margin:0rem 0.22rem 0rem 0rem">
       <div class="d-flex pt-2 pl-2">
                 <span style="color:#5cd9e8">
                     <icon name="chart-bar"></icon>
@@ -12,11 +12,10 @@
         </div>
       </div>
       <centerRightLeftChart/>
-      <!--      <centerRightRightChart/>-->
     </div>
 
   </div>
-  </div>
+
 </template>
 
 <script>
@@ -32,126 +31,6 @@ export default {
     centerRightBottomChart
   },
   name: 'BottomCharts',
-  /*  components: {
-      LabelTag
-    },*/
-  /*data () {
-    return {
-      siteData:661,
-      clusterData:1135,
-      hypervisorData:1297,
-      physicalData:661,
-      vmData:1110,
-      config1: {
-        data: [
-          {
-            name: '主机1',
-            value: 356
-          },
-          {
-            name: '主机2',
-            value: 215
-          },
-          {
-            name: '主机3',
-            value: 90
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config2: {
-        data: [
-          {
-            name: '主机2',
-            value: 615
-          },
-          {
-            name: '主机2',
-            value: 322
-          },
-          {
-            name: '主机3',
-            value: 198
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config3: {
-        data: [
-          {
-            name: '主机1',
-            value: 452
-          },
-          {
-            name: '主机2',
-            value: 512
-          },
-          {
-            name: '主机3',
-            value: 333
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config4: {
-        data: [
-          {
-            name: '主机1',
-            value: 156
-          },
-          {
-            name: '主机2',
-            value: 415
-          },
-          {
-            name: '主机3',
-            value: 90
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      config5: {
-        data: [
-          {
-            name: '主机1',
-            value: 234
-          },
-          {
-            name: '主机2',
-            value: 222
-          },
-          {
-            name: '主机3',
-            value: 654
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%',
-        showOriginValue: true
-      },
-
-      labelConfig: {
-        data: ['主机1', '主机2', '主机3']
-      }
-    }
-  },*/
   mounted() {},
   methods: {}
 }
@@ -172,15 +51,15 @@ export default {
     .bc-chart-item {
       width: 20%;
       height: 100%;
-      padding-top: 20px;
+      padding-top: 0.3rem;
       box-sizing: border-box;
     }
 
     .bcci-header {
-      height: 50px;
+      height: 0.75rem;
       text-align: center;
-      line-height: 50px;
-      font-size: 20px;
+      line-height: 0.75rem;
+      font-size: 0.3rem;
     }
 
     .dv-active-ring-chart {
@@ -188,11 +67,11 @@ export default {
     }
 
     .label-tag {
-      height: 30px;
+      height: 0.45rem;
     }
 
     .active-ring-name {
-      font-size: 16px !important;
+      font-size: 2.4rem !important;
     }
 
     .decoration-1, .decoration-2, .decoration-3, .decoration-4 {

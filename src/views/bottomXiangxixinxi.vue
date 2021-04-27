@@ -1,63 +1,63 @@
 <template>
   <div class="bottom-charts" id="bottomXiangxixinxi">
-    <div style="margin-top:10px">
+    <div style="margin-top:0.1rem">
       <div class="d-flex pt-2 pl-2">
                  <span style="color:#5cd9e8">
                       <icon name="chart-bar"></icon>
                  </span>
-       <div class="d-flex">
+        <div class="d-flex">
           <span class="fs-xl text mx-2">经纬度信息</span>
         </div>
       </div>
 
-      <dv-capsule-chart :config="config1" style="width:300px;height:200px;margin-left:10px" />
+      <dv-capsule-chart :config="config1" style="width:4.5rem;height:2.75rem;margin-left:0.15rem" />
     </div>
 
 
 
-  <div style="margin-top:10px">
-     <div class="d-flex pt-2 pl-2">
+    <div style="margin-top:-0.1rem">
+      <div class="d-flex pt-2 pl-2">
                   <span style="color:#5cd9e8">
                        <icon name="chart-bar"></icon>
                   </span>
         <div class="d-flex">
-         <span class="fs-xl text mx-2">申请人信息</span>
-       </div>
+          <span class="fs-xl text mx-2">申请人信息</span>
+        </div>
       </div>
-      <dv-scroll-board :config="config4" style="width:120px;height:160px;margin-left:10px;" />
-    <dv-scroll-board :config="config5" style="width:350px;height:160px;margin-top:-160px;margin-left:120px;" />
-  </div>
+      <dv-scroll-board :config="config4" style="width:1.8rem;height:1.9rem;margin-left:0.1rem;" />
+      <dv-scroll-board :config="config5" style="width:4.25rem;height:1.9rem;margin-top:-1.9rem;margin-left:1.45rem;" />
+    </div>
 
-    <dv-decoration-2 :reverse="true" style="width:5px;height:250px;margin-left: 450px;margin-top:-420px" />
+    <dv-decoration-2 :reverse="true" style="width:0.075rem;height:3.20rem;margin-left:5.650rem;margin-top:-5.3rem" />
 
     <!--    5个彩色装饰-->
     <div >
-      <div style="margin-top:-255px;margin-left:470px">
-       <div class="d-flex pt-2 pl-2">
+      <div style="margin-top:-3.15rem;margin-left:5.86rem">
+        <div class="d-flex pt-2 pl-2">
                      <span style="color:#5cd9e8">
                          <icon name="chart-bar"></icon>
                     </span>
-         <div class="d-flex">
-          <span class="fs-xl text mx-2">矿种</span>
-         </div>
+          <div class="d-flex">
+            <span class="fs-xl text mx-2">矿种</span>
+          </div>
+        </div>
+        <dv-percent-pond :config="config6" style="width:2.6rem;height:1.25rem;" />
       </div>
-        <dv-percent-pond :config="config6" style="width:200px;height:100px;" />
-     </div>
-     <div style="margin-top:0px;margin-left:470px">
-       <div class="d-flex pt-2 pl-2">
+      <div style="margin-top:0.0rem;margin-left:5.86rem">
+        <div class="d-flex pt-2 pl-2">
                      <span style="color:#5cd9e8">
                           <icon name="chart-bar"></icon>
                     </span>
           <div class="d-flex">
-           <span class="fs-xl text mx-2">项目性质</span>
-         </div>
+            <span class="fs-xl text mx-2">项目性质</span>
+          </div>
         </div>
-       <dv-percent-pond :config="config7" style="width:200px;height:100px;" />
+        <dv-percent-pond :config="config7" style="width:2.6rem;height:1.25rem;" />
       </div>
     </div>
 
-    <div style="margin-top:230px;margin-left:370px">
-      <div style="margin-top:-484px;margin-left:330px">
+    <div style="margin-top:2.88rem;margin-left:4.64rem">
+      <div style="margin-top:-6.06rem;margin-left:4.14rem">
         <div class="d-flex pt-2 pl-2">
                      <span style="color:#5cd9e8">
                          <icon name="chart-bar"></icon>
@@ -66,9 +66,9 @@
             <span class="fs-xl text mx-2">经济类型</span>
           </div>
         </div>
-        <dv-percent-pond :config="config8" style="width:200px;height:100px;" />
+        <dv-percent-pond :config="config8" style="width:2.6rem;height:1.25rem;" />
       </div>
-      <div style="margin-top:0px;margin-left:330px">
+      <div style="margin-top:0rem;margin-left:4.14rem">
         <div class="d-flex pt-2 pl-2">
                      <span style="color:#5cd9e8">
                           <icon name="chart-bar"></icon>
@@ -77,40 +77,29 @@
             <span class="fs-xl text mx-2">项目类型</span>
           </div>
         </div>
-        <dv-percent-pond :config="config9" style="width:200px;height:100px;" />
+        <dv-percent-pond :config="config9" style="width:2.6rem;height:1.3rem;" />
       </div>
     </div>
 
-<!--    <div style="margin-top:-100px;margin-left:600px">
 
-      <div  style="margin-top:-254px;margin-left:160px" class="d-flex pt-2 pl-2">
+
+    <dv-decoration-2 style="width:5.56rem;height:0.2rem;margin-top:0.15rem;margin-left:6.0rem" />
+
+    <div style="margin-top:0rem;margin-left:6.0rem">
+      <div   class="d-flex pt-2 pl-2">
                      <span style="color:#5cd9e8">
                          <icon name="chart-bar"></icon>
                     </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2" >勘查阶段</span>
+          <span class="fs-xl text mx-2" >勘察单位</span>
         </div>
       </div>
-      <dv-water-level-pond :config="config" style="width:150px;height:200px;margin-top:10px;margin-left:168px" />
-    </div>-->
 
-    <dv-decoration-2 style="width:450px;height:20px;margin-top:15px;margin-left:480px" />
-
-    <div style="margin-top:0px;margin-left:480px">
-    <div   class="d-flex pt-2 pl-2">
-                     <span style="color:#5cd9e8">
-                         <icon name="chart-bar"></icon>
-                    </span>
-      <div class="d-flex">
-        <span class="fs-xl text mx-2" >勘察单位</span>
-      </div>
+      <dv-percent-pond :config="config2" style="width:5.6rem;height:1.1rem;margin-left:0rem;margin-top:0.15rem" />
     </div>
 
-    <dv-percent-pond :config="config2" style="width:450px;height:90px;margin-left:0px;margin-top:10px" />
-    </div>
-
-    </div>
-<!---->
+  </div>
+  <!---->
 
 </template>
 
@@ -263,9 +252,9 @@ export default {
     };
   },
   components: {
-      centerRightLeftChart,
-      centerRightRightChart,
-      centerRightBottomChart
+    centerRightLeftChart,
+    centerRightRightChart,
+    centerRightBottomChart
   },
   mounted() {},
   methods: {}
@@ -279,13 +268,13 @@ export default {
   min-width: 3.75rem;
   border-radius: 0.0625rem;
   .el-row {
-    margin-bottom: 20px;
+    margin-bottom: 0.30rem;
     &:last-child {
       margin-bottom: 0;
     }
   }
   .el-col {
-    border-radius: 4px;
+    border-radius: 0.05rem;
   }
   .bg-color-black {
     padding: 0.0625rem;
@@ -300,22 +289,22 @@ export default {
     overflow: hidden;
   }
   .bc-height-chart-item {
+    width: 100%;
+    height: 45%;
+    padding-top: 0rem;
+    box-sizing: border-box;
+    .center-charts {
       width: 100%;
-      height: 45%;
-      padding-top: 0px;
-      box-sizing: border-box;
-      .center-charts {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        position: relative;
-        .bc-width-chart-item-top {
-            width:50%;
-            height:100%;
-            padding-top: 0px;
-            box-sizing: border-box;
-        }
+      height: 100%;
+      display: flex;
+      position: relative;
+      .bc-width-chart-item-top {
+        width:50%;
+        height:100%;
+        padding-top: 0rem;
+        box-sizing: border-box;
       }
+    }
   }
 }
 </style>
